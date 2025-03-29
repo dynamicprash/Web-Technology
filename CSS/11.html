@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tick-list {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+        }
+
+        .tick-list li {
+            position: relative;
+            padding-left: 25px; /* Add space for the tick mark */
+            margin-bottom: 10px; /* Space between list items */
+        }
+
+        .tick-list li::before {
+            content: "✓"; /* Unicode character for tick mark */
+            position: absolute;
+            left: 0;
+            color: green; /* Color of the tick mark */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <ul >
+            <li >Keyboard</li>
+            <li>Mouse</li>
+            <li>Monitoe</li>
+            <li>Printer</li>
+            <li>Touchpad</li>
+        </ul>
+    </div>
+</body>
+
+<footer>
+    Name: Prashant Paudel
+</footer>
+</html>

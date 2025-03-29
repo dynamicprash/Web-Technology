@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="ArrayMethods"></p>
+    <p id="DateMethods"></p>
+    <p id="StringMethods"></p>
+    <p id="MathMethods"></p>
+    <script>
+      function displayOutput(id, message, output) {
+        document.getElementById(id).innerHTML += message + output + "<br>";
+      }
+
+      /*
+       // Remove the last element from the array
+      colors.pop();
+      let color = `[${colors.join(",  ")}]`;
+      // Display the updated array
+      displayOutput(
+        "ArrayMethods",
+        `<br> Array After POP is: <br>`,
+        color
+      );
+
+      colors.push("cyan");
+      color = `[${colors.join(",  ")}]`;
+      // Display the updated array
+      displayOutput(
+        "ArrayMethods",
+        `<br> <br>Array After PUSH is: <br>`,
+        color
+      );*/
+      // Array Methods
+      let colors = ["red", "green", "blue", "yellow", "pink", "purple", "orange", "black", "white", "brown"];
+      colors.pop();
+      displayOutput("ArrayMethods", "Array After POP is: ", `[${colors.join(", ")}]`);
+      colors.push("cyan");
+      displayOutput("ArrayMethods", "Array After PUSH is: ", `[${colors.join(", ")}]`);
+      colors.shift();
+      displayOutput("ArrayMethods", "Array After SHIFT is: ", `[${colors.join(", ")}]`);
+      colors.unshift("violet");
+      displayOutput("ArrayMethods", "Array After UNSHIFT is: ", `[${colors.join(", ")}]`);
+
+      // Date Methods
+      let currentDate = new Date();
+      displayOutput("DateMethods", "Current Date: ", currentDate);
+      displayOutput("DateMethods", "Day of Month: ", currentDate.getDate());
+      displayOutput("DateMethods", "Month Index: ", currentDate.getMonth());
+      displayOutput("DateMethods", "Full Year: ", currentDate.getFullYear());
+      currentDate.setDate(currentDate.getDate() + 1);
+      displayOutput("DateMethods", "Updated Day of the Month: ", currentDate.getDate());
+      displayOutput("DateMethods", "Localized Date String: ", currentDate.toLocaleDateString());
+
+      // String Methods
+      let str = "Hello, World!";
+      displayOutput("StringMethods", "Original String: ", str);
+      displayOutput("StringMethods", "Uppercase: ", str.toUpperCase());
+      displayOutput("StringMethods", "Lowercase: ", str.toLowerCase());
+      displayOutput("StringMethods", "Substring(7,12): ", str.substring(7, 12));
+      displayOutput("StringMethods", "Replaced String: ", str.replace("World", "Universe"));
+      displayOutput("StringMethods", "Split String: ", JSON.stringify(str.split(", ")));
+
+      // Math Methods
+      displayOutput("MathMethods", "Max Value (5, 10, 2, 8): ", Math.max(5, 10, 2, 8));
+      displayOutput("MathMethods", "Min Value (5, 10, 2, 8): ", Math.min(5, 10, 2, 8));
+      displayOutput("MathMethods", "Round Value (4.7): ", Math.round(4.7));
+      displayOutput("MathMethods", "Random Value (0-1): ", Math.random());
+      displayOutput("MathMethods", "Floor Value (4.7): ", Math.floor(4.7));
+    </script>
+  </body>  <footer>
+    Name: Prashant Paudel
+  </footer>
+</html>

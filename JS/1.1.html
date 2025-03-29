@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let Name = prompt("Enter your name");
+      let Age = parseInt(prompt("Enter your age"));
+      let IsNepaliCitizen = prompt("Are you a Nepali citizen?");
+      IsNepaliCitizen = IsNepaliCitizen.toLowerCase();
+
+      if (IsNepaliCitizen === "yes") {
+        IsNepaliCitizen = true;
+      } else {
+        IsNepaliCitizen = false;
+      }
+
+      document.write("Name: " + Name + "<br>");
+      document.write("Age: " + Age + "<br>");
+      document.write("Nepalese? " + (IsNepaliCitizen ? "Yes" : "No"));
+    </script>
+  </head>
+  <body></body>
+  <footer>
+    Name: Prashant Paudel
+  </footer>
+</html>

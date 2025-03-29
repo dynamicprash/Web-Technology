@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Paudel</title>
+    <h1>Job Application Form</h1>
+</head>
+<body>
+    <table border="0" cellspacing="0" cellpadding="10">
+        <form action="/submit-form" method="post">
+            <tr>
+                <td>
+                    <label for="fullanme">Full :</label>
+                </td>
+                <td><input type="text" placeholder="Enter full name" name="fullname" id="fullname" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Email">Email :</label>
+                </td>
+                <td>
+                    <input type="email" placeholder="Enter email address" name="email" id="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="PNumber">Phone Number :</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Enter phone number" name="phonenumber" id="phonenumber">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Position" required>Position Applying For:</label>
+                </td>
+                <td>
+                    <select>
+                        <option value="AI-Engineer">AI-Engineer</option>
+                        <option value="SoftwareEngineer">SoftwareEngineer</option>
+                        <option value="DigialMarketing">DigialMarketing</option>
+                        <option value="NetworkSecurity">NetworkSecurity</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Experience">Years of experience:</label>
+                    
+                </td>
+                <td>
+                    <select required>
+                        <option value="0-1 years">0-1 years</option>
+                        <option value="1-3 years">1-3 years</option>
+                        <option value="3-5 years">3-5 years</option>
+                        <option value="5+ years">5+ years</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="coverLetter">Cover Letter:</label>
+                </td>
+                <tr>
+                    <td colspan="2">
+                        <textarea id="bigTextBox" name="message" rows="5" cols="30"></textarea>
+                    </td>
+                </tr>
+            </tr>
+            <tr>
+                <td >
+                    <label for="Resume">Upload Resume:</label>
+                </td>
+                <td>
+                    <input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" value="Submit">Submit Application</button>
+                </td>
+                <td>
+                    <button type="reset" value="Reset">Reset Form</button>
+                </td>
+        </form>
+
+    </table>
+</body>
+</html>

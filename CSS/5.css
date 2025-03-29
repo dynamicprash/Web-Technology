@@ -1,0 +1,51 @@
+/*.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    
+}*/
+
+.container{
+    display: grid;
+    grid-template-rows:1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    background-color: antiquewhite;
+    transition: .3s;
+}
+
+/*.row{
+    display: flex;
+    margin: 20px;
+    gap: 10px;
+    
+}*/
+
+.column{
+    display: flex;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background-color: aliceblue;
+    box-shadow: rgb(236, 115, 141) 5px 5px;
+}
+
+.column a{
+    text-decoration: none;
+    color: black;
+}
+
+.container :hover{
+    background-color: rgb(234, 234, 243);
+    box-shadow: rgb(221, 14, 59) 5px 5px;
+    
+}
+.column :hover{
+    
+    box-shadow: none;
+    
+}

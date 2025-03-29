@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .maincontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+        position: relative;
+      }
+      .container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 1000px;
+        margin: 10px;
+        
+        background-color: hsl(0, 81%, 87%);
+      }
+      .container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+        width: 1000px;
+        margin: 10px;
+        transition: height 0.3s ease-in-out;
+        min-height: 400px; 
+        background-color: hsl(169, 83%, 82%);
+      }
+      #result2{
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maincontainer">
+    <div class="container">
+      <div class="container1">
+        Enter a number to check if it is prime or not.<br />
+        <label for="number"></label>
+        <input type="text" id="number" name="number" /> &emsp13;
+        <label for="Submit"></label>
+        <input
+          type="submit"
+          id="Submit"
+          name="Submit"
+          value="Submit"
+          onclick="checkPrime()"
+        />
+
+        <p id="result"></p>
+      </div>
+      <div class="container2">
+        <p> Click Show bitton to see number from 1 to 100.</p>
+        <br>
+        <button onclick="showNumbers()">Show</button>
+        <p id="result2"></p> </p>
+      </div>
+    </div>
+  </div>
+  </body>
+
+  <script>
+    function checkPrime() {
+      let Number = parseInt(document.getElementById("number").value);
+      if (Number == 1) {
+        result.innerHTML = "1 is neither prime nor composite.";
+      } else {
+        let count = 0;
+        for (let i = 1; i <= Number; i++) {
+          if (Number % i == 0) {
+            count++;
+          }
+        }
+        if (count == 2) {
+          result.innerHTML = Number + " is a prime number.";
+        } else {
+          result.innerHTML = Number + " is not a prime number.";
+        }
+      }
+    }
+
+    function showNumbers() {
+      
+      let result2 = document.getElementById("result2");
+
+for (let i = 1; i <= 100; i++) {
+    setTimeout(() => {
+        let type = (i % 2 === 0) ? "even" : "odd";
+        result2.innerHTML += `${i} is ${type}<br>`;
+        
+    }, i * 1000); 
+}
+      
+    }
+  </script>
+    <footer>
+      Name: Prashant Paudel
+    </footer>
+</html>

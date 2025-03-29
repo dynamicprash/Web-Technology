@@ -1,0 +1,33 @@
+fieldset{
+    border-color: #00fac8;
+    background-color: beige;
+}
+
+input:focus{
+    background-color: yellow;
+    color: blue;
+}
+
+input :valid, textarea:valid{
+    border: 2px solid green;
+}
+
+input:invalid,
+    textarea:invalid {
+    border: 2px solid red;
+}
+
+legend {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+select:checked option {
+    height: 5em; /* 2em is the default height of an option */
+}
+
+body{
+    background-color: #e2c6e2;
+}

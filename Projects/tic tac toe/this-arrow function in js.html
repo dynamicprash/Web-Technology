@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const user = {
+        username: "Prashant",
+        id: 1,
+
+        welcomeMessage: function () {
+          document.write(`${this.username}, welcome to websit`);
+        },
+      };
+
+      user.welcomeMessage();
+      user.username = "<br>Prashanna";
+      user.welcomeMessage();
+    //   const hello=  function(){  //-this will print userneme  as undefined because
+    //       let username = "Hari"
+    //       document.write(`${this.username}, fefe`);
+    //   }
+
+    //   hello();
+    //   const hello = () => {  //-this will not print userneme  as undefined because
+    //     let username = "Hari";
+    //     console.log(`${this.username}, fefe`);
+    //   };
+    //   hello();
+
+
+    //Basic arrow function:
+    let sum = (num1, num2)=>{
+        return num1 + num2;
+    }
+
+    //Other ways to write the arrow function.
+    //let sum = (num1, num2)=> return num1 + num2;
+    // let sum = (num1, num2)=> num1 + num2;
+    // let sum = (num1, num2)=> (num1 + num2);----------------This technique is used highly in REACT
+
+    document.write(`<br> Sum of 1 and 2 is  ${sum(1,2)}.`);
+
+    
+    </script>
+  </head>
+  <body></body>
+</html>

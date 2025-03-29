@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p class=" colortable">
+        <table border = "1px solid" id = colorRow>
+            <tr>
+                <th>Color Name</th>
+                <th>Color</th>
+            </tr>
+        </table>
+    </p>
+
+    <script>
+        const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple', 'orange', 'black', 'white', 'brown'];
+
+        colorRow = document.getElementById('colorRow');
+
+        for (let i = 0; i< colors.length; i++){
+            colorRow.innerHTML = colorRow.innerHTML +   `<tr> <td> ${colors[i]} </td> <td style = 'background-color:  ${colors[i]}; width: 100px; height: 20px;'> </td> </tr>`;
+        }
+    </script>
+</body>
+<footer>
+    Name: Prashant Paudel
+  </footer>
+</html>

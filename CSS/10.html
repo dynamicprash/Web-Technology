@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements and Big Starting Letter</title>
+    <style>
+        p {
+            line-height: 1.5rem;
+            font-size: 16px;
+            text-align: justify;
+            max-width: 600px;
+        }
+
+        p::first-letter {
+            font-size: 3em; 
+            font-weight: bold;
+            float: left; 
+            line-height: 1.2; 
+            margin-right: 5px; 
+            margin-top: -10px; 
+            color: green;
+        }
+
+        
+        p::first-line {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: red;
+        }
+
+        
+        p::after {
+            content: " - This is the added content after the paragraph.";
+            font-style: italic;
+            color: blue;
+        }
+
+        
+        ::selection {
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <p>The first letter of this text should appear big enough to cover the top portion of both lines of text. This effect is achieved using CSS pseudo-eleudo-element. Try selecting some text to see how the `::selection` pseudo-element works!
+    </p>
+
+</body>
+
+<footer>
+    Name: Prashant Paudel
+</footer>
+</html>

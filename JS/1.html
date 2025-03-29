@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question-1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        let length = 50;
+        let breath = 20;
+
+        let fname = "prashant";
+        let lname = "paudel";
+
+        let x = true;
+        let y = false;
+
+        function area(){
+            document.write('your area is: '+length*breath);
+        }
+
+        function fullname(){
+            document.write('<br><br>your name is: '+fname + lname);
+        }
+
+        function checkCitizen() {
+            let citizenRadios = document.getElementsByName('citizen');
+            let isNepaliCitizen;
+
+            for (let radio of citizenRadios) {
+                if (radio.checked) {
+                    isNepaliCitizen = radio.value;
+                    break;
+                }
+            }
+            isNepaliCitizen === 'yes' ? result.innerHTML = result.innerHTML + "<br> You are a Nepali citizen."  : result.innerHTML = result.innerHTML +   "<br> You are not a Nepali citizen.";
+               
+        }
+    </script>
+</head>
+<body>
+
+    <script>
+        area();
+        fullname();
+    </script>
+    <p>Are you a Nepali Citizen?</p>
+    <input type="radio" id="yes" name="citizen" value="yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="citizen" value="no">
+    <label for="no">No</label>
+    <br><br>
+    <button onclick="checkCitizen()">Submit</button>
+    <p ></p>
+<br>
+    <pre id="result">
+        Name: Prashant Paudel
+        Symbol: 79010510
+        
+        BSc.CSIT 5th Semester
+    </pre>
+</body>
+<footer>
+    Name: Prashant Paudel
+  </footer>
+</html>
