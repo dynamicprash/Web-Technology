@@ -1,3 +1,12 @@
+*{
+    background-color: rgb(126, 176, 176);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 tr{
     height: 70px;
     
@@ -8,10 +17,12 @@ td{
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 48px;
+    background-color: rgb(81, 205, 222);
 }
 
 h1{
     text-align: center;
+    font-family:monospace, 'Times New Roman', Times, serif;
 }
 
 .GameContainer{
@@ -19,7 +30,15 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    width: 250px;
     
+}
+table {
+    background-color: beige;
+    border: 2px solid cadetblue;
+
 }
 
 .GameStatus{
