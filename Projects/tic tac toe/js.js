@@ -41,12 +41,12 @@ function cellUpdate(){
         changePlayer();
         
         checkWin();
-        statusUpdate();
+        
     }
     else{
         return;
     }
-   
+  
     
 }
 
@@ -67,16 +67,28 @@ function restartGame(){
 }
 
 function statusUpdate(){
-    GameStatus.innerHTML = `${player}'s Trun`;
+    if(win){
+        GameStatus.innerHTML = `${player} Wins`;
+        running = false;
+    }
+
+    else if(!clickedValues.includes("")){
+        GameStatus.innerHTML = `Draw`;
+        running = false;
+    }
+    else{
+        GameStatus.innerHTML = `${player}'s Trun`;
+    }
+    
 }
 
 function checkWin(){
     let win = false;
     for(let i = 0; i < winConditions.length; i++){
-        let win  = winConditions[i];
-        let cellA = win[0];
-        let cellB = win[1];
-        let cellC = win[2];
+        let Win  = winConditions[i];
+        let cellA = Win[0];
+        let cellB = Win[1];
+        let cellC = Win[2];
 
         if(cellA == "" || cellB == "" || cellC == ""){
             continue;
@@ -87,16 +99,8 @@ function checkWin(){
             break;
         }
     }
-
-    if(win){
-        GameStatus.innerHTML = `${player} Wins`;
-        running = false;
-    }
-
-    else if(!clickedValues.includes("")){
-        GameStatus.innerHTML = `Draw`;
-        running = false;
-    }
+    statusUpdate();
+    
 
     return;
 }
