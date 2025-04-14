@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Prashant Paudel</title>
   </head>
   <body>
     <p id="car"></p>
@@ -12,14 +12,15 @@
       type="button"
       name="btn"
       class="btn"
-      id="btn "
+      id="btn"
       value="Update Car Properties"
     />
     <script>
-      let car = {
-        Name: Honda,
+      let cars = {
+        Name: "Honda",
         Model: 213213,
       };
+
       let values = [
         "Toyota",
         213213,
@@ -38,8 +39,33 @@
         "Mercedes",
         324243,
       ];
+
+      let car = document.getElementById("car");
+      let a = 0;
+      let b = 1;
+      let count = 0;
+
+      // Display initial car
+      car.innerHTML = `Car: ${cars.Name} &nbsp;&nbsp;&nbsp; Model: ${cars.Model}`;
+
       let btn = document.getElementById("btn");
-      btn.addEventListener("click", function () {});
+      btn.addEventListener("click", function () {
+        if (a < values.length && b < values.length) {
+          cars.Name = values[a];
+          cars.Model = values[b];
+          car.innerHTML = `Car: ${cars.Name} &nbsp;&nbsp;&nbsp; Model: ${cars.Model}`;
+          a += 2;
+          b += 2;
+        } else {
+          if (count == 0) {
+            car.innerHTML += `<br> Your Car data is finished Upgrading`;
+            count = 1;
+          } else {
+            car.innerHTML = car.innerHTML;
+          }
+        }
+      });
     </script>
   </body>
+  <footer>Name: Prashant Paudel</footer>
 </html>
